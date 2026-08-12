@@ -25,6 +25,7 @@
   --font-family--font-family_body: "Intertight Variablefont Wght", Arial, sans-serif;
   --font-size--64: 4rem;
   --font-size--40: 2.5rem;
+  --font-size--62: 3.875rem;
   --font-size--72: 4.5rem;
   --font-size--48: 3rem;
   --font-size--16: 1rem;
@@ -46,7 +47,6 @@
   --font-size--70: 4.375rem;
   --font-size--68: 4.25rem;
   --font-size--66: 4.125rem;
-  --font-size--62: 3.875rem;
   --font-size--60: 3.75rem;
   --font-size--58: 3.625rem;
   --font-size--56: 3.5rem;
@@ -666,10 +666,17 @@ img {
 }
 
 .for-desktop_wrapper {
-  justify-content: center;
+  grid-column-gap: 3.5rem;
+  grid-row-gap: 3.5rem;
+  flex-flow: column;
+  justify-content: flex-end;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  max-width: 82rem;
+  min-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5rem;
   padding-left: 4rem;
   padding-right: 4rem;
   display: flex;
@@ -678,7 +685,7 @@ img {
 .for-desktop_text {
   font-family: var(--font-family--font-family_header);
   color: var(--colors--black);
-  font-size: var(--font-size--64);
+  font-size: var(--font-size--62);
   line-height: var(--font-size--72);
   font-weight: var(--font-weight--regular);
   text-align: center;
@@ -869,6 +876,21 @@ img {
 
 .section-4, .section-5, .section-6 {
   display: none;
+}
+
+.div-block {
+  justify-content: center;
+  align-items: center;
+  width: 24rem;
+  display: flex;
+}
+
+.div-block-2 {
+  justify-content: center;
+  align-items: center;
+  width: 16rem;
+  height: 16rem;
+  display: flex;
 }
 
 @media screen and (max-width: 991px) {
@@ -1180,6 +1202,7 @@ img {
   }
 
   .animation-section3 {
+    width: 100%;
     max-width: 60%;
     margin-left: auto;
     margin-right: auto;
@@ -1197,6 +1220,11 @@ img {
   .section-4_content {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+  }
+
+  .image-section4 {
+    width: 100%;
+    height: auto;
   }
 
   .button {
@@ -1293,14 +1321,9 @@ img {
     letter-spacing: var(--font-spacing--2);
     border: 1px #000;
     border-radius: .5rem;
+    outline: none;
     padding: .625rem 1rem;
     display: block;
-  }
-
-  .form-input.radio-btn {
-    width: 1.125rem;
-    height: 1.125rem;
-    padding: 1rem;
   }
 
   .success-message, .error-message {
@@ -1350,6 +1373,19 @@ img {
     line-height: var(--font-size--24);
     font-weight: var(--font-weight--regular);
     letter-spacing: var(--font-spacing--2);
+  }
+
+  .body.is-hidden {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    overflow-y: hidden;
+  }
+
+  .bg-home_video {
+    width: 100%;
+    height: 100%;
   }
 }
 
